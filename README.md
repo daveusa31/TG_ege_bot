@@ -1,7 +1,7 @@
 # TG_ege_bot
 
 <h1 align="center">Ege Telegram Bot👋</h1>
-<h2 align="center" href="https://github.com/daveusa31/TG_ege_bot/releases">Скачать последнюю версию бота</h2>
+<a align="center" href="https://github.com/daveusa31/TG_ege_bot/releases">Скачать последнюю версию бота</a>
 
 ## 🚀 Установка
 
