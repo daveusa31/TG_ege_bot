@@ -129,6 +129,8 @@ def callback_inline(call):
             with open("pays_base.txt", "a", encoding="utf-8") as f:
                 f.write("{}\n".format(chat_id))
 
+            bot.send_message(config.ADMIN_ID, "Пользователь {} совершил оплату".format(call.message.chat.username), parse_mode="markdown")
+
         else:
             bot.send_message(chat_id, "*К сожалению*, оплата не получена. _Попробуйте через пару секунд._", parse_mode="markdown")
 
@@ -144,6 +146,8 @@ def callback_inline(call):
 
         if str(description) == str(chat_id):
             bot.send_message(chat_id, "*Оплата получена!*", parse_mode="markdown")
+
+            bot.send_message(config.ADMIN_ID, "Пользователь {} совершил тест оплату".format(call.message.chat.username), parse_mode="markdown")
         elif str(description) != str(chat_id):
             bot.send_message(chat_id, "*К сожалению*, оплата не получена. _Попробуйте через пару секунд._", parse_mode="markdown")
     
