@@ -6,7 +6,7 @@
 1. Устанавливаем пейтон(Python 3.7):
 	Скачиваем инсталятор с [официального сайта](https://www.python.org/ftp/python/3.7.3/python-3.7.3.exe) и запускаем.
 
-    <h3>Ставим галочки</h3>
+    Ставим галочки
 
     ![](https://telegra.ph/file/eda752da317fa1fe9679d.png)
 
