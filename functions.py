@@ -7,12 +7,12 @@ def message_logger(text, username):
 	# Файл уже создан
 	try:
 		with open("log.txt", "a", encoding="utf-8") as f:
-			f.write(text + " | @" + username + "\n")
+			f.write("{} | @{}\n".format(text, username))
 
 	# Создаём файл
 	except:
 		with open("log.txt", "w", encoding="utf-8") as f:
-			f.write(text + " | @" + username + "\n")
+			f.write("{} | @{}\n".format(text, username))
 
 def get_all_users(file="base.txt"):
 	with open(file, "r", encoding="utf-8") as f:
