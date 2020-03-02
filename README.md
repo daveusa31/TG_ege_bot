@@ -1,9 +1,24 @@
 <h1 align="center">Ege Telegram Bot👋</h1>
 <a href="https://github.com/daveusa31/TG_ege_bot/releases">Скачать последнюю версию бота</a>
 
+## 💁‍♀️ Скриншоты:
+![](https://i6.imageban.ru/out/2020/03/02/739fd25390916e024fb7074be63e09db.png)![](https://i6.imageban.ru/out/2020/03/02/ae960acb4dc28ae52b458bc71f5fbd53.png)
+
+
+
+
+
+
+
+
+
+
+
 ## 🚀 Установка
 
 1. Устанавливаем пейтон(Python 3.7):
+	<h3>Для Windows</h3>
+
 	Скачиваем инсталятор с [официального сайта](https://www.python.org/ftp/python/3.7.3/python-3.7.3.exe) и запускаем.
 
     Ставим галочки
@@ -11,12 +26,22 @@
     ![](https://telegra.ph/file/eda752da317fa1fe9679d.png)
 
 
+    <h3>Для Android</h3>
+
+     Установите приложение [Termux](https://play.google.com/store/apps/details?id=com.termux), запустите его и введите следующие команды поочерёдно:
+     ```sh
+     pkg install python
+     pkg install clang
+     ```
+
+
 
 2. Устанавливаем зависимость:
 	win + r -> cmd 
 
+	```sh
 	В консоль вводим pip install PyTelegramBotApi
-
+	```
 
 
 3. Редактируем config.py:
