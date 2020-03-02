@@ -1,9 +1,9 @@
+import time
 import config
 import telebot
 import datetime
 import subprocess
 
-# Мои библы
 
 bot = telebot.TeleBot(config.TOKEN)
 
@@ -29,18 +29,17 @@ def run_bot_loop():
 
 
 if __name__ == "__main__":
-    logger("Старт ege bot")
+    logger("Start ege bot")
     while True:
         error = run_bot_loop()
-        logger("Перезапуск") 
+        logger("Restart") 
 
-        try:
-            with open("error.txt", "w", encoding="utf-8") as f: f.write(error)
-            doc = open("error.txt", "rb")
-            bot.send_document(config.ADMIN_ID, doc)
-            doc.close()
-        except: 
-            pass
+       
+        with open("error.txt", "w", encoding="utf-8") as f: f.write(error)
+        doc = open("error.txt", "rb")
+        bot.send_document(config.ADMIN_ID, doc)
+        doc.close()
+
 
         time.sleep(10)
 
