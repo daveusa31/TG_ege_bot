@@ -11,8 +11,6 @@ from telebot import types
 
 
 bot = telebot.TeleBot(config.TOKEN) #В модуле config.py заполняем переменную TOKEN, токеном от тг бота
-print("Bot is started.")
-
 
 @bot.message_handler(commands=["start"])
 def start_message(message):
