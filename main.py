@@ -114,10 +114,11 @@ def callback_inline(call):
     chat_id = call.from_user.id
     
     if call.data == "payment_check":
-        url = "https://edge.qiwi.com/payment-history/v2/persons/{0}/payments".format(str(config.qiwi_number))
+        url = "https://edge.qiwi.com/payment-history/v2/persons/{}/payments".format(config.qiwi_number)
         headers = {"Accept": "application/json", "Content-Type": "application/json", "Authorization": "Bearer " + config.qiwi_token}
         req = requests.get(url, params={"rows": 1, "operation": "IN"}, headers=headers)
 
+        req = req.json()
         js = json.dumps(req)
         js = json.loads(js)
         description = js["data"][0]["comment"]
@@ -135,11 +136,12 @@ def callback_inline(call):
             bot.send_message(chat_id, "*К сожалению*, оплата не получена. _Попробуйте через пару секунд._", parse_mode="markdown")
 
 
-    if call.data == "payment_check_test":
-        url = "https://edge.qiwi.com/payment-history/v2/persons/{0}/payments".format(str(config.qiwi_number))
+    elif call.data == "payment_check_test":
+        url = "https://edge.qiwi.com/payment-history/v2/persons/{}/payments".format(config.qiwi_number)
         headers = {"Accept": "application/json", "Content-Type": "application/json", "Authorization": "Bearer " + config.qiwi_token}
         req = requests.get(url, params={"rows": 1, "operation": "IN"}, headers=headers)
-
+        
+        req = req.json()
         js = json.dumps(req)
         js = json.loads(js)
         description = js["data"][0]["comment"]
