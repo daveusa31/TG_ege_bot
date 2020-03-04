@@ -54,6 +54,7 @@
 
 
 4. Запускаем скрипт:
+	<h3>Для Windows</h3>
 	win + r -> cmd 
 
 	В консоль вводите
@@ -61,6 +62,16 @@
 	```sh
 	cd путь до папки с ботом
 	py run.py
+	```
+
+
+	<h3>Для Android</h3>
+
+	В temux вводите:
+	```sh
+	termux-setup-storage
+	cd путь до папки с ботом
+	python run.py
 	```
 
 
