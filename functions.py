@@ -14,13 +14,14 @@ def message_logger(text, username):
 		with open("log.txt", "w", encoding="utf-8") as f:
 			f.write("{} | @{}\n".format(text, username))
 
+
 def get_all_users(file="base.txt"):
 	with open(file, "r", encoding="utf-8") as f:
 		users = f.read()
 
 	users = users.split("\n")
 
-	return users
+	return users[:-1]
 
 
 def get_buyers(file="pays_base.txt"):
@@ -29,6 +30,6 @@ def get_buyers(file="pays_base.txt"):
 
 	users = users.split("\n")
 
-	return users
+	return users[:-1]
 
 	
