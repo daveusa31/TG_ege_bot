@@ -1,5 +1,5 @@
 def get_payment_link(sum,  number, comment):
-	link = "https://qiwi.com/payment/form/99?extra%5B%27account%27%5D={}&amountInteger={}&amountFraction=0&extra%5B%27comment%27%5D={}&currency=643&blocked[0]=sum&blocked[1]=comment&blocked[2]=account"
+	link = "https://w.qiwi.com/payment/form/99?extra%5B%27account%27%5D={}&amountInteger={}&amountFraction=0&extra%5B%27comment%27%5D={}&currency=643&blocked[0]=sum&blocked[1]=comment&blocked[2]=account"
 	link = link.format(number, sum, comment)
 	return link
 
