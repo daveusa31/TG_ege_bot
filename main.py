@@ -114,7 +114,7 @@ def callback_inline(call):
     if call.data == "payment_check":
         url = "https://edge.qiwi.com/payment-history/v2/persons/{}/payments".format(config.qiwi_number)
         headers = {"Accept": "application/json", "Content-Type": "application/json", "Authorization": "Bearer " + config.qiwi_token}
-        req = requests.get(url, params={"rows": 1, "operation": "IN"}, headers=headers)
+        req = requests.get(url, params={"rows": 1, "operation": "IN"}, headers=headers, verify=False)
 
         req = req.json()
         js = json.dumps(req)
@@ -137,7 +137,7 @@ def callback_inline(call):
     elif call.data == "payment_check_test":
         url = "https://edge.qiwi.com/payment-history/v2/persons/{}/payments".format(config.qiwi_number)
         headers = {"Accept": "application/json", "Content-Type": "application/json", "Authorization": "Bearer " + config.qiwi_token}
-        req = requests.get(url, params={"rows": 1, "operation": "IN"}, headers=headers)
+        req = requests.get(url, params={"rows": 1, "operation": "IN"}, headers=headers, verify=False)
         
         req = req.json()
         js = json.dumps(req)
